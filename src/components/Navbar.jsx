@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Star } from 'lucide-react';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -11,32 +14,84 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const navLinks = [
+        { name: 'Servizi', href: '#servizi' },
+        { name: 'Portfolio', href: '#portfolio' },
+        { name: 'Recensioni', href: '#recensioni' },
+        { name: 'Chi Sono', href: '#chisono' },
+        { name: 'Contatti', href: '#contatti' },
+    ];
+
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'glass-nav py-4' : 'bg-transparent py-6'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'glass-nav py-4' : 'bg-transparent py-8'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <div className="flex flex-col">
-                    <span className="text-2xl font-serif tracking-widest text-antracite uppercase">Vivirito</span>
-                    <span className="text-[10px] tracking-[0.3em] text-oro uppercase -mt-1">Maestria Decò</span>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="flex flex-col group cursor-pointer"
+                >
+                    <span className={`text-2xl font-serif tracking-[0.2em] uppercase transition-colors duration-500 ${isScrolled ? 'text-antracite' : 'text-white'}`}>Vivirito</span>
+                    <div className="flex items-center space-x-2">
+                        <span className="text-[9px] tracking-[0.4em] text-oro uppercase -mt-1 font-medium">Maestria Decò</span>
+                    </div>
+                </motion.div>
 
-                <div className="hidden md:flex space-x-12">
-                    {['Servizi', 'Portfolio', 'Chi Sono', 'Contatti'].map((item) => (
-                        <a
-                            key={item}
-                            href={`#${item.toLowerCase().replace(' ', '')}`}
-                            className="text-sm uppercase tracking-widest text-antracite hover:text-oro transition-colors duration-300"
+                <div className="hidden lg:flex items-center space-x-10">
+                    {navLinks.map((link, i) => (
+                        <motion.a
+                            key={link.name}
+                            href={link.href}
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                            className={`text-[10px] uppercase tracking-[0.3em] font-medium transition-colors duration-300 ${isScrolled ? 'text-antracite hover:text-oro' : 'text-white/80 hover:text-white'
+                                }`}
                         >
-                            {item}
-                        </a>
+                            {link.name}
+                        </motion.a>
                     ))}
+                    <motion.a
+                        href="#contatti"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="bg-oro text-white px-6 py-2.5 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-oro-opaco transition-all duration-300 shadow-lg shadow-oro/20"
+                    >
+                        Preventivo
+                    </motion.a>
                 </div>
 
-                <button className="md:hidden text-antracite">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
+                <button
+                    className="lg:hidden"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                    {mobileMenuOpen ? <X size={24} className="text-antracite" /> : <Menu size={24} className={isScrolled ? 'text-antracite' : 'text-white'} />}
                 </button>
             </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="lg:hidden bg-white border-b border-tortora/10 overflow-hidden"
+                    >
+                        <div className="flex flex-col p-6 space-y-4">
+                            {navLinks.map((link) => (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="text-antracite text-xs uppercase tracking-widest py-2 border-b border-tortora/5"
+                                >
+                                    {link.name}
+                                </a>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 };
