@@ -20,12 +20,12 @@ const Hero = () => {
                 className="absolute inset-0"
             >
                 <img
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000"
-                    alt="Luxury Artisan Decoration"
+                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000"
+                    alt="Luxury Interior Decoration"
                     className="w-full h-full object-cover scale-110"
                 />
                 <div className="absolute inset-0 hero-gradient"></div>
-                <div className="absolute inset-0 bg-antracite/20"></div>
+                <div className="absolute inset-0 bg-antracite/40"></div>
             </motion.div>
 
             <div className="container mx-auto px-6 relative z-10">

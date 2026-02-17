@@ -5,10 +5,10 @@ import { Paintbrush, Hexagon, Layers, Wand2 } from 'lucide-react';
 const services = [
     {
         title: "Tinteggiatura Decorativa",
-        description: "Finiture che catturano la luce. Oltre la semplice colre, creiamo atmosfere.",
+        description: "Finiture che catturano la luce. Oltre il semplice colore, creiamo atmosfere.",
         icon: <Paintbrush size={32} strokeWidth={1} />,
         size: "md:col-span-2",
-        img: "https://images.unsplash.com/photo-1562663473-170289d8db13?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1544450141-19d03409195b?auto=format&fit=crop&q=80&w=800"
     },
     {
         title: "Microcemento",
@@ -29,7 +29,7 @@ const services = [
         description: "Recuperiamo la bellezza classica con maestria contemporanea.",
         icon: <Wand2 size={32} strokeWidth={1} />,
         size: "md:col-span-2",
-        img: "https://images.unsplash.com/photo-1589939705384-51834a5d083d?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800"
     }
 ];
 
