@@ -15,7 +15,7 @@ const About = () => {
                     >
                         <div className="aspect-[4/5] bg-antracite overflow-hidden rounded-sm shadow-2xl">
                             <img
-                                src="https://images.unsplash.com/photo-1590402444521-8276f5de0545?auto=format&fit=crop&q=80&w=1000"
+                                src="/images/img1.jpeg"
                                 alt="L'Artigiano al lavoro"
                                 className="w-full h-full object-cover opacity-80 transition-transform duration-1000 hover:scale-105"
                             />

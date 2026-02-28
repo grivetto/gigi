@@ -8,28 +8,28 @@ const services = [
         description: "Finiture che catturano la luce. Oltre il semplice colore, creiamo atmosfere.",
         icon: <Paintbrush size={32} strokeWidth={1} />,
         size: "md:col-span-2",
-        img: "https://images.unsplash.com/photo-1544450141-19d03409195b?auto=format&fit=crop&q=80&w=800"
+        img: "/images/img3.jpeg"
     },
     {
         title: "Microcemento",
         description: "La purezza del cemento in forme continue e moderne.",
         icon: <Hexagon size={32} strokeWidth={1} />,
         size: "md:col-span-1",
-        img: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&q=80&w=800"
+        img: "/images/img4.jpeg"
     },
     {
         title: "Resine Sartoriali",
         description: "Design e resistenza fusi in un'unica superficie.",
         icon: <Layers size={32} strokeWidth={1} />,
         size: "md:col-span-1",
-        img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+        img: "/images/img5.jpeg"
     },
     {
         title: "Stucchi & Restauro",
         description: "Recuperiamo la bellezza classica con maestria contemporanea.",
         icon: <Wand2 size={32} strokeWidth={1} />,
         size: "md:col-span-2",
-        img: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800"
+        img: "/images/img1.jpeg"
     }
 ];
 

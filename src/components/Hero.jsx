@@ -19,11 +19,15 @@ const Hero = () => {
                 style={{ y, opacity }}
                 className="absolute inset-0"
             >
-                <img
-                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000"
-                    alt="Luxury Interior Decoration"
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-full object-cover scale-110"
-                />
+                >
+                    <source src="/images/video.mp4" type="video/mp4" />
+                </video>
                 <div className="absolute inset-0 hero-gradient"></div>
                 <div className="absolute inset-0 bg-antracite/40"></div>
             </motion.div>

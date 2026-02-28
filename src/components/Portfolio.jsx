@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Maximize2 } from 'lucide-react';
 
 const projects = [
-    { id: 1, category: 'Residenziale', title: 'Villa Smeralda', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800' },
-    { id: 2, category: 'Commerciale', title: 'Atelier Mode', image: 'https://images.unsplash.com/photo-1541746972996-4e0b0f43e01a?auto=format&fit=crop&q=80&w=800' },
-    { id: 3, category: 'Residenziale', title: 'Penthouse Minimal', image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800' },
-    { id: 4, category: 'Esterni', title: 'Restauro Facciata', image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=800' },
-    { id: 5, category: 'Commerciale', title: 'Luxury Hotel', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800' },
-    { id: 6, category: 'Residenziale', title: 'Cucina Loft', image: 'https://images.unsplash.com/photo-1556911220-e15224bbaf4b?auto=format&fit=crop&q=80&w=800' },
+    { id: 1, category: 'Residenziale', title: 'Villa Smeralda', image: '/images/img1.jpeg' },
+    { id: 2, category: 'Commerciale', title: 'Atelier Mode', image: '/images/img2.jpeg' },
+    { id: 3, category: 'Residenziale', title: 'Penthouse Minimal', image: '/images/img3.jpeg' },
+    { id: 4, category: 'Esterni', title: 'Restauro Facciata', image: '/images/img4.jpeg' },
+    { id: 5, category: 'Commerciale', title: 'Luxury Hotel', image: '/images/img5.jpeg' },
+    { id: 6, category: 'Residenziale', title: 'Cucina Loft', image: '/images/img2.jpeg' } // reusing img2 for now as we only have 5 images
 ];
 
 const categories = ['Tutti', 'Residenziale', 'Commerciale', 'Esterni'];
