@@ -21,9 +21,9 @@ const Contact = () => {
 
                         <div className="space-y-10">
                             {[
-                                { icon: <MapPin size={24} />, title: "Atelier", text: "Via dell'Artigianato, 12 - Roma" },
-                                { icon: <Mail size={24} />, title: "Email", text: "progetti@viviritodeco.it" },
-                                { icon: <Phone size={24} />, title: "Telefono", text: "+39 06 1234567" }
+                                { icon: <MapPin size={24} />, title: "Atelier", text: "Via Nicola Fabrizi 80 interno 54 - 10145 Torino TO - Italy" },
+                                { icon: <Mail size={24} />, title: "Email", text: "pierluigi@vivirito.it" },
+                                { icon: <Phone size={24} />, title: "Telefono", text: "+39 391 361 8790" }
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start space-x-6 group">
                                     <div className="text-oro group-hover:scale-110 transition-transform duration-300">{item.icon}</div>

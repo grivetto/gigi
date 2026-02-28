@@ -30,9 +30,9 @@ const Navbar = () => {
                     animate={{ opacity: 1, x: 0 }}
                     className="flex flex-col group cursor-pointer"
                 >
-                    <span className={`text-2xl font-serif tracking-[0.2em] uppercase transition-colors duration-500 ${isScrolled ? 'text-antracite' : 'text-white'}`}>Vivirito</span>
+                    <span className={`text-2xl font-serif tracking-[0.2em] uppercase transition-colors duration-500 ${isScrolled ? 'text-antracite' : 'text-white'}`}>Gigi</span>
                     <div className="flex items-center space-x-2">
-                        <span className="text-[9px] tracking-[0.4em] text-oro uppercase -mt-1 font-medium">Maestria Decò</span>
+                        <span className="text-[9px] tracking-[0.4em] text-oro uppercase -mt-1 font-medium">il decoratore</span>
                     </div>
                 </motion.div>
 

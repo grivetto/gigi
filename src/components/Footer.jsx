@@ -16,8 +16,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
                     <div className="md:col-span-2">
                         <div className="flex flex-col mb-8">
-                            <span className="text-3xl font-serif tracking-[0.2em] text-white uppercase">Vivirito</span>
-                            <span className="text-xs tracking-[0.4em] text-oro uppercase -mt-1 font-medium">Maestria Decò</span>
+                            <span className="text-3xl font-serif tracking-[0.2em] text-white uppercase">Gigi</span>
+                            <span className="text-xs tracking-[0.4em] text-oro uppercase -mt-1 font-medium">il decoratore</span>
                         </div>
                         <p className="text-white/40 text-sm max-w-sm leading-relaxed mb-8">
                             Dal 1998, trasformiamo gli spazi in espressioni d'arte. Eccellenza artigiana e materiali nobili per un design senza tempo.
@@ -66,7 +66,7 @@ const Footer = () => {
                 <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="text-white/20 text-[10px] uppercase tracking-[0.3em] text-center md:text-left">
                         © 2026 Vivirito Maestria Decò. All rights reserved. <br className="md:hidden" />
-                        P.IVA 01234567890 | Roma, Italia.
+                        P.IVA 01234567890 | Torino, Italia.
                     </div>
 
                     <button
