@@ -1,16 +1,48 @@
-# React + Vite
+# Gigi il decoratore - Sito Web Ufficiale
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Benvenuti nel repository del sito web ufficiale di **Gigi il decoratore** (precedentemente Vivirito Maestria Decò), artigiano specializzato in decorazioni d'interni di lusso, microcemento, resine e stucchi veneziani a Torino.
 
-Currently, two official plugins are available:
+## Architettura del Progetto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Il progetto è una Single Page Application (SPA) costruita con:
+- **React 19** per la struttura a componenti.
+- **Vite** come bundler e server di sviluppo per performance ottimali.
+- **Tailwind CSS** per lo styling utility-first e il design responsivo.
+- **Framer Motion** per animazioni fluide e transizioni degli elementi UI.
+- **Lucide React** per l'iconografia.
 
-## React Compiler
+### Struttura dei Componenti Principali (`src/components/`)
+- `Navbar.jsx`: Barra di navigazione fissa che gestisce lo scroll e il menu responsive su dispositivi mobili.
+- `Hero.jsx`: Sezione iniziale d'impatto con video di background auto-riprodotto (`public/images/video.mp4`).
+- `Services.jsx`: Griglia dei servizi offerti (Tinteggiatura, Microcemento, Resine, Stucchi) con immagini di sfondo e hover states.
+- `Portfolio.jsx`: Galleria lavori filtrabile con animazioni di layout (utilizza `framer-motion`).
+- `Reviews.jsx`: Sezione testimonianze clienti.
+- `About.jsx`: Sezione "Chi Sono" e filosofia artigianale.
+- `Contact.jsx`: Form di contatto e informazioni geografiche (Atelier, Email, Telefono).
+- `Footer.jsx`: Piè di pagina con link legali e navigazione.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Modifiche Recenti (v0.0.2)
 
-## Expanding the ESLint configuration
+- **Rebranding**: Aggiornato il nome del brand da "Vivirito Maestria Decò" a "Gigi il decoratore" su Navbar, Footer e nei metadati globali (`index.html`).
+- **Aggiornamento Contatti**: Aggiornati i dettagli di contatto:
+  - Indirizzo: Via Nicola Fabrizi 80 interno 54 - 10145 Torino TO - Italy
+  - Email: pierluigi@vivirito.it
+  - Telefono: +39 391 361 8790
+- **Integrazione Media**: Sostituiti i placeholder con le immagini reali dai progetti (`img1.jpeg` - `img5.jpeg`) e il video hero (`video.mp4`) ospitati nella directory `public/images/`.
+- **Deploy Automation**:
+  - Aggiunto lo script FTP locale `deploy.js` (tramite `basic-ftp`) per pubblicazioni dirette ed immediate sul server live (`vivirito.it`).
+  - Configurato GitHub Actions (`.github/workflows/deploy.yml`) per la compilazione automatica e deploy su GitHub Pages ad ogni push su branch `main`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Sviluppo Locale e Deploy
+
+### Avviare in Locale
+1. Clona il repository: `git clone ...`
+2. Installa le dipendenze: `npm install`
+3. Avvia il dev server: `npm run dev`
+
+### Deploy Diretto (FTP su vivirito.it)
+Aggiungere le credenziali nello script, dopodiché avviare:
+```bash
+npm install --no-save basic-ftp
+npm run build && node deploy.js
+```
