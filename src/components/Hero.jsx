@@ -39,7 +39,7 @@ const Hero = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <span className="text-oro tracking-[0.6em] uppercase text-xs mb-8 block font-medium">Roma • Milano • Firenze</span>
+                        <span className="text-oro tracking-[0.6em] uppercase text-xs mb-8 block font-medium">Torino</span>
 
                         <h1 className="text-6xl md:text-8xl text-white mb-8 leading-[0.9] font-serif">
                             L'Eccellenza <br />
