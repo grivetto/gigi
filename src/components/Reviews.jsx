@@ -104,7 +104,9 @@ const Reviews = () => {
 
                 <div className="mt-16 text-center">
                     <a
-                        href="#"
+                        href="https://g.page/r/YOUR_COMPANY_ID/review"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center space-x-2 text-antracite hover:text-oro transition-colors text-xs uppercase tracking-[0.3em] gold-glow"
                     >
                         <span>Leggi tutte su Google</span>
