@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Maximize2 } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 const projects = [
     { id: 1, category: 'Residenziale', title: 'Villa Smeralda', image: '/images/img1.jpeg' },
@@ -76,10 +76,15 @@ const Portfolio = () => {
                                         <h3 className="text-white text-3xl font-serif mb-4">
                                             {project.title}
                                         </h3>
-                                        <div className="flex items-center space-x-3 text-white/50 text-[10px] uppercase tracking-widest border-t border-white/10 pt-4">
-                                            <Maximize2 size={14} />
-                                            <span>Vedi Dettagli</span>
-                                        </div>
+                                        <a
+                                            href="https://g.page/r/YOUR_COMPANY_ID/review"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center space-x-3 text-white/80 hover:text-white text-[10px] uppercase tracking-widest border-t border-white/10 pt-4 transition-colors"
+                                        >
+                                            <Star size={14} className="text-oro fill-oro/50" />
+                                            <span>Lascia una Recensione</span>
+                                        </a>
                                     </div>
                                 </div>
                             </motion.div>
