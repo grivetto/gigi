@@ -21,7 +21,15 @@ Il progetto è una Single Page Application (SPA) costruita con:
 - `Contact.jsx`: Form di contatto e informazioni geografiche (Atelier, Email, Telefono).
 - `Footer.jsx`: Piè di pagina con link legali e navigazione.
 
-## Modifiche Recenti (v0.0.2)
+## Modifiche Recenti (v0.0.3)
+
+- **SEO & Navigabilità**: 
+  - Ottimizzazione meta tag (Title, Description, OpenGraph, Twitter) focalizzati su Torino, Milano, Roma e Firenze.
+  - Inserimento di tag GEO specifici e Schema.org JSON-LD per migliorare l'indicizzazione locale (`HomeAndConstructionBusiness`).
+  - Creazione di `robots.txt` a supporto di `sitemap.xml`.
+- **Ampliamento Portfolio**: Aggiunte 4 nuove referenze fotografiche (`img6.jpeg` - `img9.jpeg`) alla galleria di `Portfolio.jsx` con categorizzazione espansa.
+
+## Storico Versioni (v0.0.2)
 
 - **Rebranding**: Aggiornato il nome del brand da "Vivirito Maestria Decò" a "Gigi il decoratore" su Navbar, Footer e nei metadati globali (`index.html`).
 - **Aggiornamento Contatti**: Aggiornati i dettagli di contatto:

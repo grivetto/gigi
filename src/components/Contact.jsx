@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        type: 'Tinteggiatura Decorativa',
+        message: ''
+    });
+    const [status, setStatus] = useState('idle');
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('loading');
+        try {
+            const res = await fetch('./contact.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            if (res.ok) {
+                setStatus('success');
+                setFormData({ name: '', email: '', type: 'Tinteggiatura Decorativa', message: '' });
+                setTimeout(() => setStatus('idle'), 5000);
+            } else {
+                setStatus('error');
+                setTimeout(() => setStatus('idle'), 5000);
+            }
+        } catch (error) {
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 5000);
+        }
+    };
+
     return (
         <section id="contatti" className="py-24 bg-antracite text-white overflow-hidden">
             <div className="container mx-auto px-6">
@@ -40,22 +77,22 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="lg:w-1/2 bg-white/5 p-10 md:p-12 border border-white/5 relative"
+                        className="lg:w-1/2 bg-white/5 p-10 md:p-12 border border-white/5 relative flex flex-col justify-center"
                     >
-                        <form className="space-y-8 relative z-10">
+                        <form onSubmit={handleSubmit} className="space-y-8 relative z-10 w-full">
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-3">
                                     <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">Il tuo Nome</label>
-                                    <input type="text" className="w-full bg-transparent border-b border-white/10 py-3 focus:border-oro outline-none transition-colors text-white font-sans" placeholder="Es. Mario Rossi" />
+                                    <input required name="name" value={formData.name} onChange={handleChange} type="text" className="w-full bg-transparent border-b border-white/10 py-3 focus:border-oro outline-none transition-colors text-white font-sans" placeholder="Es. Mario Rossi" />
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">La tua Email</label>
-                                    <input type="email" className="w-full bg-transparent border-b border-white/10 py-3 focus:border-oro outline-none transition-colors text-white font-sans" placeholder="vostra@email.com" />
+                                    <input required name="email" value={formData.email} onChange={handleChange} type="email" className="w-full bg-transparent border-b border-white/10 py-3 focus:border-oro outline-none transition-colors text-white font-sans" placeholder="vostra@email.com" />
                                 </div>
                             </div>
                             <div className="space-y-3">
                                 <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">Tipo di Lavorazione</label>
-                                <select className="w-full bg-transparent border-b border-white/10 py-3 focus:border-oro outline-none transition-colors text-white/60 appearance-none font-sans">
+                                <select name="type" value={formData.type} onChange={handleChange} className="w-full bg-transparent border-b border-white/10 py-3 focus:border-oro outline-none transition-colors text-white/60 appearance-none font-sans">
                                     <option className="bg-antracite">Tinteggiatura Decorativa</option>
                                     <option className="bg-antracite">Microcemento & Resine</option>
                                     <option className="bg-antracite">Stucchi Veneziani</option>
@@ -64,19 +101,28 @@ const Contact = () => {
                             </div>
                             <div className="space-y-3">
                                 <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold">Il tuo Messaggio</label>
-                                <textarea rows="4" className="w-full bg-transparent border-b border-white/10 py-3 focus:border-oro outline-none transition-colors text-white font-sans" placeholder="Parlaci del tuo progetto..."></textarea>
+                                <textarea required name="message" value={formData.message} onChange={handleChange} rows="4" className="w-full bg-transparent border-b border-white/10 py-3 focus:border-oro outline-none transition-colors text-white font-sans" placeholder="Parlaci del tuo progetto..."></textarea>
                             </div>
                             <motion.button
+                                disabled={status === 'loading'}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full bg-white text-antracite py-5 tracking-[0.3em] font-sans text-[10px] uppercase font-bold transition-all duration-300 flex items-center justify-center space-x-3 hover:bg-oro hover:text-white"
+                                type="submit"
+                                className="w-full bg-white text-antracite py-5 tracking-[0.3em] font-sans text-[10px] uppercase font-bold transition-all duration-300 flex items-center justify-center space-x-3 hover:bg-oro hover:text-white disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                <span>Invia Richiesta</span>
-                                <Send size={16} />
+                                {status === 'loading' ? (
+                                    <span>Invio in corso...</span>
+                                ) : status === 'success' ? (
+                                    <><span>Inviato!</span><CheckCircle2 size={16} /></>
+                                ) : status === 'error' ? (
+                                    <><span>Errore. Riprova</span><AlertCircle size={16} /></>
+                                ) : (
+                                    <><span>Invia Richiesta</span><Send size={16} /></>
+                                )}
                             </motion.button>
                         </form>
                         {/* Background design element */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-oro/10 blur-[80px] -z-0"></div>
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-oro/10 blur-[80px] -z-0 pointer-events-none"></div>
                     </motion.div>
                 </div>
             </div>

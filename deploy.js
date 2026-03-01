@@ -11,7 +11,7 @@ async function deploy() {
             secure: false
         })
         console.log("Connected to FTP server.")
-        await client.ensureDir("/")
+        await client.ensureDir("/www")
         await client.uploadFromDir("dist")
         console.log("Upload completed.")
     }

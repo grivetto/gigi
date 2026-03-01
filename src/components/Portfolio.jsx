@@ -8,7 +8,10 @@ const projects = [
     { id: 3, category: 'Residenziale', title: 'Penthouse Minimal', image: '/images/img3.jpeg' },
     { id: 4, category: 'Esterni', title: 'Restauro Facciata', image: '/images/img4.jpeg' },
     { id: 5, category: 'Commerciale', title: 'Luxury Hotel', image: '/images/img5.jpeg' },
-    { id: 6, category: 'Residenziale', title: 'Cucina Loft', image: '/images/img2.jpeg' } // reusing img2 for now as we only have 5 images
+    { id: 6, category: 'Residenziale', title: 'Cucina Loft', image: '/images/img6.jpeg' },
+    { id: 7, category: 'Esterni', title: 'Esterni Esclusivi', image: '/images/img7.jpeg' },
+    { id: 8, category: 'Commerciale', title: 'Boutique Design', image: '/images/img8.jpeg' },
+    { id: 9, category: 'Residenziale', title: 'Appartamento d\'Epoca', image: '/images/img9.jpeg' }
 ];
 
 const categories = ['Tutti', 'Residenziale', 'Commerciale', 'Esterni'];
