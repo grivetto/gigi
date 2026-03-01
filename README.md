@@ -54,3 +54,10 @@ Aggiungere le credenziali nello script, dopodiché avviare:
 npm install --no-save basic-ftp
 npm run build && node deploy.js
 ```
+
+## 🔐 Passaggio di Proprietà Futuro (Handover)
+Affinché il sito venga trasferito definitivamente al suo vero proprietario in futuro, andranno seguiti questi passaggi:
+1. **Repository GitHub**: Trasferire la proprietà ("Transfer Ownership") del repository GitHub dal profilo attuale a quello del destinatario.
+2. **Accesso FTP**: Consegnare all'utente finale le credenziali per caricare le modifiche sul server `vivirito.it` (indirizzo FTP, username e password fornite).
+3. **Google Search Console**: Entrare nelle Impostazioni di Search Console -> *Utenti e autorizzazioni* e aggiungere l'account Google del proprietario finale come Amministratore (Owner/Full), permettendogli infine di rimuovere il tuo account.
+4. **Rimozione Script Personali**: Assicurarsi che nel file `deploy.js` non rimangano scritte in chiaro password o username (idealmente andrebbero lette tramite `.env` files o secret di GitHub Actions).
