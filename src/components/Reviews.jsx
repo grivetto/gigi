@@ -35,8 +35,11 @@ const reviews = [
 
 const Reviews = () => {
     return (
-        <section id="recensioni" className="py-24 mesh-gradient">
-            <div className="container mx-auto px-6">
+        <section id="recensioni" className="py-24 bg-antracite relative overflow-hidden">
+            {/* Subtle background glow */}
+            <div className="absolute top-0 left-0 w-96 h-96 bg-oro/5 blur-[120px] -z-0"></div>
+
+            <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
@@ -51,7 +54,7 @@ const Reviews = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-serif text-antracite uppercase tracking-tighter"
+                        className="text-4xl md:text-5xl font-serif text-white uppercase tracking-tighter"
                     >
                         Recensioni Google
                     </motion.h2>
@@ -59,8 +62,8 @@ const Reviews = () => {
                         <div className="flex text-oro">
                             {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
                         </div>
-                        <span className="text-antracite font-medium">4.9/5</span>
-                        <span className="text-tortora text-sm">(Basato su 48 recensioni)</span>
+                        <span className="text-white font-medium">4.9/5</span>
+                        <span className="text-white/40 text-sm">(Basato su 48 recensioni)</span>
                     </div>
                 </div>
 
@@ -72,7 +75,7 @@ const Reviews = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bento-card p-8 group hover:border-oro/40"
+                            className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 group hover:border-oro/40 transition-all duration-500 rounded-sm"
                         >
                             <div className="flex justify-between items-start mb-6">
                                 <div className="flex text-oro">
@@ -85,32 +88,36 @@ const Reviews = () => {
                                 </div>
                             </div>
 
-                            <p className="text-tortora font-sans text-sm leading-relaxed mb-6 italic">
+                            <p className="text-white/70 font-sans text-sm leading-relaxed mb-6 italic">
                                 "{review.text}"
                             </p>
 
-                            <div className="flex items-center space-x-3 border-t border-tortora/10 pt-6">
+                            <div className="flex items-center space-x-3 border-t border-white/5 pt-6">
                                 <div className="w-10 h-10 rounded-full bg-oro/10 flex items-center justify-center text-oro font-serif text-lg">
                                     {review.name[0]}
                                 </div>
                                 <div>
-                                    <h4 className="text-antracite font-serif text-sm font-semibold">{review.name}</h4>
-                                    <p className="text-tortora text-[10px] uppercase tracking-widest">{review.date}</p>
+                                    <h4 className="text-white font-serif text-sm font-semibold">{review.name}</h4>
+                                    <p className="text-white/30 text-[10px] uppercase tracking-widest">{review.date}</p>
                                 </div>
                             </div>
                         </motion.div>
                     ))}
                 </div>
 
-                <div className="mt-16 text-center">
+                <div className="mt-20 text-center">
                     <a
                         href="https://g.page/r/CRslYMML2HHaEAE/review"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-3 text-antracite hover:text-oro transition-colors text-xs uppercase tracking-[0.3em] gold-glow"
+                        className="inline-flex items-center space-x-4 text-white hover:text-oro transition-all duration-300 group"
                     >
-                        <Star size={16} className="fill-current" />
-                        <span>Lascia una recensione</span>
+                        <div className="text-oro transition-transform duration-300 group-hover:scale-110">
+                            <Star size={20} />
+                        </div>
+                        <span className="text-xs uppercase tracking-[0.4em] font-medium pt-0.5">
+                            Lascia una recensione
+                        </span>
                     </a>
                 </div>
             </div>
