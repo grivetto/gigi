@@ -21,7 +21,14 @@ Il progetto è una Single Page Application (SPA) costruita con:
 - `Contact.jsx`: Form di contatto e informazioni geografiche (Atelier, Email, Telefono).
 - `Footer.jsx`: Piè di pagina con link legali e navigazione.
 
-## Modifiche Recenti (v0.0.3)
+## Modifiche Recenti (v0.0.4)
+
+- **Recensioni Google**:
+  - Integrazione link diretti per la scrittura e lettura di recensioni su Google Maps/Search.
+  - Aggiunta icona "Star" nel Footer per accesso rapido alle recensioni.
+  - Collegamento dell'account `vivipigy72@gmail.com` (ID: `5730687770262287032`) per la gestione dei commenti.
+
+## Storico Versioni (v0.0.3)
 
 - **SEO & Navigabilità**: 
   - Ottimizzazione meta tag (Title, Description, OpenGraph, Twitter) focalizzati su Torino, Milano, Roma e Firenze.

@@ -104,7 +104,7 @@ const Reviews = () => {
 
                 <div className="mt-16 text-center">
                     <a
-                        href="https://g.page/r/YOUR_COMPANY_ID/review"
+                        href="https://www.google.com/search?q=Vivirito+Maestria+Decò+Torino#lrd=0x47886d3c00000000:0x4f8e7b99c7336f38,1"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center space-x-2 text-antracite hover:text-oro transition-colors text-xs uppercase tracking-[0.3em] gold-glow"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Facebook, Linkedin, ArrowUp } from 'lucide-react';
+import { Instagram, Facebook, Linkedin, ArrowUp, Star } from 'lucide-react';
 
 const Footer = () => {
     const scrollToTop = () => {
@@ -33,6 +33,16 @@ const Footer = () => {
                                     <Icon size={20} />
                                 </motion.a>
                             ))}
+                            <motion.a
+                                whileHover={{ y: -3, color: '#C5A059' }}
+                                href="https://www.google.com/search?q=Vivirito+Maestria+Decò+Torino#lrd=0x47886d3c00000000:0x4f8e7b99c7336f38,1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white/30 transition-colors"
+                                title="Recensioni Google"
+                            >
+                                <Star size={20} />
+                            </motion.a>
                         </div>
                     </div>
 
