@@ -58,7 +58,7 @@ const Contact = () => {
 
                         <div className="space-y-10">
                             {[
-                                { icon: <MapPin size={24} />, title: "Atelier", text: "Via Nicola Fabrizi 80 interno 54 - 10145 Torino TO - Italy" },
+                                { icon: <MapPin size={24} />, title: "Indirizzo", text: "Via Nicola Fabrizi 80 interno 54 - 10145 Torino TO - Italy" },
                                 { icon: <Mail size={24} />, title: "Email", text: "pierluigi@vivirito.it" },
                                 { icon: <Phone size={24} />, title: "Telefono", text: "+39 391 361 8790" }
                             ].map((item, i) => (
