@@ -77,7 +77,7 @@ const Portfolio = () => {
                                             {project.title}
                                         </h3>
                                         <a
-                                            href="https://g.page/r/YOUR_COMPANY_ID/review"
+                                            href="https://g.page/r/CRslYMML2HHaEAE/review"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center space-x-3 text-white/80 hover:text-white text-[10px] uppercase tracking-widest border-t border-white/10 pt-4 transition-colors"
