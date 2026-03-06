@@ -24,7 +24,7 @@ Il progetto è una Single Page Application (SPA) costruita con:
 ## Modifiche Recenti (v0.0.4)
 
 - **Recensioni Google**:
-  - Integrazione link diretti per la scrittura e lettura di recensioni su Google Maps/Search.
+  - Integrazione link diretti per la scrittura e lettura di recensioni tramite URL ufficiale `g.page`.
   - Aggiunta icona "Star" nel Footer per accesso rapido alle recensioni.
   - Collegamento dell'account `vivipigy72@gmail.com` (ID: `5730687770262287032`) per la gestione dei commenti.
 
