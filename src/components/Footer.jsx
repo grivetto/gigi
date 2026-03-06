@@ -39,7 +39,7 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white/30 transition-colors"
-                                title="Recensioni Google"
+                                title="Lascia una recensione"
                             >
                                 <Star size={20} />
                             </motion.a>

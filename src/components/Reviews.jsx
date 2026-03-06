@@ -107,12 +107,10 @@ const Reviews = () => {
                         href="https://g.page/r/CRslYMML2HHaEAE/review"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-2 text-antracite hover:text-oro transition-colors text-xs uppercase tracking-[0.3em] gold-glow"
+                        className="inline-flex items-center space-x-3 text-antracite hover:text-oro transition-colors text-xs uppercase tracking-[0.3em] gold-glow"
                     >
-                        <span>Leggi tutte su Google</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                        </svg>
+                        <Star size={16} className="fill-current" />
+                        <span>Lascia una recensione</span>
                     </a>
                 </div>
             </div>
