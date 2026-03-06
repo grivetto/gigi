@@ -3,15 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Star } from 'lucide-react';
 
 const projects = [
-    { id: 1, category: 'Residenziale', title: 'Villa Smeralda', image: '/images/img1.jpeg' },
-    { id: 2, category: 'Commerciale', title: 'Atelier Mode', image: '/images/img2.jpeg' },
-    { id: 3, category: 'Residenziale', title: 'Penthouse Minimal', image: '/images/img3.jpeg' },
-    { id: 4, category: 'Ritocchi d\'Interni', title: 'Rifiniture di Pregio', image: '/images/img4.jpeg' },
-    { id: 5, category: 'Commerciale', title: 'Luxury Hotel', image: '/images/img5.jpeg' },
-    { id: 6, category: 'Residenziale', title: 'Cucina Loft', image: '/images/img6.jpeg' },
-    { id: 7, category: 'Ritocchi d\'Interni', title: 'Dettagli d\'Alta Moda', image: '/images/img7.jpeg' },
-    { id: 8, category: 'Commerciale', title: 'Boutique Design', image: '/images/img8.jpeg' },
-    { id: 9, category: 'Residenziale', title: 'Appartamento d\'Epoca', image: '/images/img9.jpeg' }
+    { id: 1, category: 'Residenziale', title: 'Geometrie in Camera da Letto', image: '/images/img1.jpeg' },
+    { id: 2, category: 'Residenziale', title: 'Parete Decorativa Soggiorno', image: '/images/img2.jpeg' },
+    { id: 3, category: 'Residenziale', title: 'Finitura Materica Chiara', image: '/images/img3.jpeg' },
+    { id: 4, category: 'Ritocchi d\'Interni', title: 'Ritocco Parete Moderna', image: '/images/img4.jpeg' },
+    { id: 5, category: 'Residenziale', title: 'Angolo Notte Classic', image: '/images/img5.jpeg' },
+    { id: 6, category: 'Commerciale', title: 'Restyling Bancone Bar', image: '/images/img6.jpeg' },
+    { id: 7, category: 'Ritocchi d\'Interni', title: 'Dettaglio Bancone Geometrico', image: '/images/img7.jpeg' },
+    { id: 8, category: 'Residenziale', title: 'Nicchia con Effetto Nuvolato', image: '/images/img8.jpeg' },
+    { id: 9, category: 'Commerciale', title: 'Lavorazione Artigianale Bancone', image: '/images/img9.jpeg' }
 ];
 
 const categories = ['Tutti', 'Residenziale', 'Commerciale', 'Ritocchi d\'Interni'];
