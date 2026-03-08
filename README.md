@@ -21,7 +21,14 @@ Il progetto è una Single Page Application (SPA) costruita con:
 - `Contact.jsx`: Form di contatto e informazioni geografiche (Atelier, Email, Telefono).
 - `Footer.jsx`: Piè di pagina con link legali e navigazione.
 
-## Modifiche Recenti (v0.0.4)
+## Modifiche Recenti (v0.0.5)
+
+- **Nuova Sezione Video ("Mastery in Action")**:
+  - Inserita una sezione video cinematografica tra i Servizi e il Portfolio.
+  - Utilizzo del video `work-video.mp4` per mostrare il processo artigianale dal vivo.
+  - Implementazione di effetti parallax e scaling dinamico allo scroll tramite Framer Motion.
+
+## Storico Versioni (v0.0.4)
 
 - **Recensioni Google**:
   - Integrazione link diretti per la scrittura e lettura di recensioni tramite URL ufficiale `g.page`.
