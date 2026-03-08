@@ -104,11 +104,8 @@ const Portfolio = () => {
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 )}
-                                <a
-                                    href={project.reviewLink || "https://g.page/r/CRslYMML2HHaEAE/review"}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="absolute inset-0 bg-antracite/60 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex flex-col justify-end p-8 z-20 hover:no-underline"
+                                <div
+                                    className="absolute inset-0 bg-antracite/60 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex flex-col justify-end p-8 z-20"
                                 >
                                     <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                                         <span className="text-oro text-[10px] uppercase tracking-[0.3em] mb-2 block">
@@ -117,12 +114,17 @@ const Portfolio = () => {
                                         <h3 className="text-white text-3xl font-serif mb-4">
                                             {project.title}
                                         </h3>
-                                        <div className="flex items-center space-x-3 text-white/80 hover:text-white text-[10px] uppercase tracking-widest border-t border-white/10 pt-4 transition-colors">
+                                        <a
+                                            href={project.reviewLink || "https://g.page/r/CRslYMML2HHaEAE/review"}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center space-x-3 text-white/80 hover:text-white text-[10px] uppercase tracking-widest border-t border-white/10 pt-4 transition-colors hover:no-underline"
+                                        >
                                             <Star size={14} className="text-oro fill-oro/50" />
                                             <span>{project.reviewLink ? "Leggi la Recensione" : "Lascia una Recensione"}</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                </a>
+                                </div>
                             </motion.div>
                         ))}
                     </AnimatePresence>
