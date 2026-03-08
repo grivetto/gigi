@@ -5,31 +5,24 @@ import { Star, Quote } from 'lucide-react';
 const reviews = [
     {
         id: 1,
-        name: "Marco Valeri",
-        text: "Professionista eccezionale. Ha trasformato il nostro soggiorno con uno stucco veneziano da sogno. Precisione millimetrica e pulizia incredibile.",
+        name: "Cosimo Perrino",
+        text: "Eccellente, preciso puntuale e attento ai particolari e ai prodotti utilizzati consigliatissimo",
         rating: 5,
-        date: "2 mesi fa"
+        date: "1 giorno fa"
     },
     {
         id: 2,
-        name: "Elena Rossi",
-        text: "Il microcemento applicato in cucina è perfetto. Cercavamo un effetto moderno e Vivirito ha superato le nostre aspettative. Consigliatissimo!",
+        name: "francesco girasole",
+        text: "Persona molto affidabile, siamo atati sodiafatti in tutto e per tutto, molto professionale",
         rating: 5,
-        date: "1 mese fa"
+        date: "1 giorno fa"
     },
     {
         id: 3,
-        name: "Giuseppe Conti",
-        text: "Sempre puntuale e attento ai materiali ecologici. Si vede che ama il suo lavoro. Un vero artista della decorazione.",
+        name: "Gianfranco Vivirito",
+        text: "Professionalità e competenza ai massimi livelli. Un vero maestro della decorazione.",
         rating: 5,
-        date: "3 settimane fa"
-    },
-    {
-        id: 4,
-        name: "Alessandra Moretti",
-        text: "Abbiamo restaurato delle superfici antiche e il risultato è stato sbalorditivo. Un maestro del fatto a mano.",
-        rating: 5,
-        date: "4 mesi fa"
+        date: "1 giorno fa"
     }
 ];
 

@@ -21,14 +21,14 @@ Il progetto è una Single Page Application (SPA) costruita con:
 - `Contact.jsx`: Form di contatto e informazioni geografiche (Atelier, Email, Telefono).
 - `Footer.jsx`: Piè di pagina con link legali e navigazione.
 
-## Modifiche Recenti (v0.0.5)
+## Modifiche Recenti (v0.0.6)
 
-- **Nuova Sezione Video ("Mastery in Action")**:
-  - Inserita una sezione video cinematografica tra i Servizi e il Portfolio.
-  - Utilizzo del video `work-video.mp4` per mostrare il processo artigianale dal vivo.
-  - Implementazione di effetti parallax e scaling dinamico allo scroll tramite Framer Motion.
+- **Recensioni Reali & Portfolio**:
+  - Aggiornata la sezione "Recensioni Google" con feedback reali (Cosimo Perrino, francesco girasole, Gianfranco Vivirito).
+  - Collegati i primi 3 progetti del Portfolio direttamente alle recensioni originali su Google per massima trasparenza.
+  - Testi CTA dinamici in base alla presenza del link alla recensione.
 
-## Storico Versioni (v0.0.4)
+## Storico Versioni (v0.0.5)
 
 - **Recensioni Google**:
   - Integrazione link diretti per la scrittura e lettura di recensioni tramite URL ufficiale `g.page`.

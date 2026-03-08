@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star } from 'lucide-react';
 
+const reviewUrl = "https://www.google.com/search?sca_esv=8fc45dfe74b6bcf0&hl=it&authuser=0&sxsrf=ANbL-n5risRVP10vxR3RHRLSPKhR0G3ucA:1772988283033&q=Pierluigi+Decoratore&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOUDBcGLyz3LchbFtGt1pLmzqoEecG-DxOXAfcr62UMGJYdYgKz6ElNdv-bDnks-hiTGzLTo%3D&uds=ALYpb_lLt3rF4OntvAcKw6YR8l5VYcuAuKdy2woofLf9v67oWAVz1di4W6YhbiCR-5eX2ZR3GDEb_jHiSGuLDPkamwVNZiZHu_yiUD5_etQGO23t2DJcFVzreGDtJUUfaBcQVpva_xWB&sa=X&ved=2ahUKEwjRg7SG4JCTAxV42gIHHTMXMWsQ3PALegQIGhAE&biw=1920&bih=1065";
+
 const projects = [
-    { id: 1, category: 'Residenziale', title: 'Geometrie in Camera da Letto', image: '/images/img1.jpeg' },
-    { id: 2, category: 'Residenziale', title: 'Parete Decorativa Soggiorno', image: '/images/img2.jpeg' },
-    { id: 3, category: 'Residenziale', title: 'Finitura Materica Chiara', image: '/images/img3.jpeg' },
+    { id: 1, category: 'Residenziale', title: 'Geometrie in Camera da Letto', image: '/images/img1.jpeg', reviewLink: reviewUrl },
+    { id: 2, category: 'Residenziale', title: 'Parete Decorativa Soggiorno', image: '/images/img2.jpeg', reviewLink: reviewUrl },
+    { id: 3, category: 'Residenziale', title: 'Finitura Materica Chiara', image: '/images/img3.jpeg', reviewLink: reviewUrl },
     { id: 4, category: 'Ritocchi d\'Interni', title: 'Ritocco Parete Moderna', image: '/images/img4.jpeg' },
     { id: 5, category: 'Residenziale', title: 'Angolo Notte Classic', image: '/images/img5.jpeg' },
     { id: 6, category: 'Commerciale', title: 'Restyling Bancone Bar', image: '/images/img6.jpeg' },
@@ -69,7 +71,7 @@ const Portfolio = () => {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <a
-                                    href="https://g.page/r/CRslYMML2HHaEAE/review"
+                                    href={project.reviewLink || "https://g.page/r/CRslYMML2HHaEAE/review"}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="absolute inset-0 bg-antracite/60 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex flex-col justify-end p-8 z-20 hover:no-underline"
@@ -83,7 +85,7 @@ const Portfolio = () => {
                                         </h3>
                                         <div className="flex items-center space-x-3 text-white/80 hover:text-white text-[10px] uppercase tracking-widest border-t border-white/10 pt-4 transition-colors">
                                             <Star size={14} className="text-oro fill-oro/50" />
-                                            <span>Lascia una Recensione</span>
+                                            <span>{project.reviewLink ? "Leggi la Recensione" : "Lascia una Recensione"}</span>
                                         </div>
                                     </div>
                                 </a>
