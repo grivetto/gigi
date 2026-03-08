@@ -21,14 +21,21 @@ Il progetto è una Single Page Application (SPA) costruita con:
 - `Contact.jsx`: Form di contatto e informazioni geografiche (Atelier, Email, Telefono).
 - `Footer.jsx`: Piè di pagina con link legali e navigazione.
 
+## Modifiche Recenti (v0.0.8)
+
+- **Video Support nel Portfolio**:
+  - Implementata la riproduzione automatica di video (`.mp4`) nella galleria lavori.
+  - Aggiunti 3 nuovi contenuti video per mostrare la dinamicità delle lavorazioni.
+- **Espansione Massiccia della Galleria**:
+  - Aggiunte 16 nuove referenze fotografiche (`img14.jpeg` - `img29.jpeg`).
+  - Il portfolio conta ora un totale di **32 progetti d'eccellenza** tra foto e video.
+
+## Modifiche Recenti (v0.0.7)
+
+- **Ampliamento Galleria Portfolio**:
+  - Aggiunte 4 nuove referenze fotografiche (`img10.jpeg` - `img13.jpeg`) al Portfolio.
+
 ## Modifiche Recenti (v0.0.6)
-
-- **Recensioni Reali & Portfolio**:
-  - Aggiornata la sezione "Recensioni Google" con feedback reali (Cosimo Perrino, francesco girasole, Gianfranco Vivirito).
-  - Collegati i primi 3 progetti del Portfolio direttamente alle recensioni originali su Google per massima trasparenza.
-  - Testi CTA dinamici in base alla presenza del link alla recensione.
-
-## Storico Versioni (v0.0.5)
 
 - **Recensioni Google**:
   - Integrazione link diretti per la scrittura e lettura di recensioni tramite URL ufficiale `g.page`.

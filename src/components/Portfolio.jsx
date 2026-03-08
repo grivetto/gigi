@@ -13,7 +13,30 @@ const projects = [
     { id: 6, category: 'Commerciale', title: 'Restyling Bancone Bar', image: '/images/img6.jpeg' },
     { id: 7, category: 'Ritocchi d\'Interni', title: 'Dettaglio Bancone Geometrico', image: '/images/img7.jpeg' },
     { id: 8, category: 'Residenziale', title: 'Nicchia con Effetto Nuvolato', image: '/images/img8.jpeg' },
-    { id: 9, category: 'Commerciale', title: 'Lavorazione Artigianale Bancone', image: '/images/img9.jpeg' }
+    { id: 9, category: 'Commerciale', title: 'Lavorazione Artigianale Bancone', image: '/images/img9.jpeg' },
+    { id: 10, category: 'Residenziale', title: 'Finitura Satinata Moderna', image: '/images/img10.jpeg' },
+    { id: 11, category: 'Residenziale', title: 'Dettaglio Materico Parete', image: '/images/img11.jpeg' },
+    { id: 12, category: 'Ritocchi d\'Interni', title: 'Intervento di Prestigio', image: '/images/img12.jpeg' },
+    { id: 13, category: 'Residenziale', title: 'Atmosfere Contemporanee', image: '/images/img13.jpeg' },
+    { id: 14, category: 'Residenziale', title: 'Rifiniture d\'Eccellenza', image: '/images/img14.jpeg' },
+    { id: 15, category: 'Residenziale', title: 'Eleganza Materica', image: '/images/img15.jpeg' },
+    { id: 16, category: 'Residenziale', title: 'Dettaglio di Design', image: '/images/img16.jpeg' },
+    { id: 17, category: 'Residenziale', title: 'Armonia Cromatica', image: '/images/img17.jpeg' },
+    { id: 18, category: 'Residenziale', title: 'Prospettive Moderne', image: '/images/img18.jpeg' },
+    { id: 19, category: 'Residenziale', title: 'Texture Innovative', image: '/images/img19.jpeg' },
+    { id: 20, category: 'Residenziale', title: 'Restauro Conservativo', image: '/images/img20.jpeg' },
+    { id: 21, category: 'Residenziale', title: 'Luce e Colore', image: '/images/img21.jpeg' },
+    { id: 22, category: 'Residenziale', title: 'Minimalismo Raffinato', image: '/images/img22.jpeg' },
+    { id: 23, category: 'Residenziale', title: 'Craftsmanship Italiano', image: '/images/img23.jpeg' },
+    { id: 24, category: 'Residenziale', title: 'Atmosfera Esclusiva', image: '/images/img24.jpeg' },
+    { id: 25, category: 'Residenziale', title: 'Stile Contemporaneo', image: '/images/img25.jpeg' },
+    { id: 26, category: 'Residenziale', title: 'Superfici di Pregio', image: '/images/img26.jpeg' },
+    { id: 27, category: 'Residenziale', title: 'Equilibrio Formale', image: '/images/img27.jpeg' },
+    { id: 28, category: 'Residenziale', title: 'Estetica Funzionale', image: '/images/img28.jpeg' },
+    { id: 29, category: 'Ritocchi d\'Interni', title: 'Dettaglio Artigianale', image: '/images/img29.jpeg' },
+    { id: 30, category: 'Ritocchi d\'Interni', title: 'L\'Arte del Gesto', image: '/images/video.mp4' },
+    { id: 31, category: 'Ritocchi d\'Interni', title: 'Precisione e Dettaglio', image: '/images/work-video.mp4' },
+    { id: 32, category: 'Ritocchi d\'Interni', title: 'Rifiniture in Movimento', image: '/images/vid1.mp4' }
 ];
 
 const categories = ['Tutti', 'Residenziale', 'Commerciale', 'Ritocchi d\'Interni'];
@@ -65,11 +88,22 @@ const Portfolio = () => {
                                 transition={{ duration: 0.4 }}
                                 className="group bento-card aspect-[4/5]"
                             >
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                                {project.image.endsWith('.mp4') ? (
+                                    <video
+                                        src={project.image}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                    />
+                                ) : (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                )}
                                 <a
                                     href={project.reviewLink || "https://g.page/r/CRslYMML2HHaEAE/review"}
                                     target="_blank"
