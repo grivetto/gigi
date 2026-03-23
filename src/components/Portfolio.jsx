@@ -36,7 +36,8 @@ const projects = [
     { id: 29, category: 'Ritocchi d\'Interni', title: 'Dettaglio Artigianale', image: '/images/img29.jpeg' },
     { id: 30, category: 'Ritocchi d\'Interni', title: 'L\'Arte del Gesto', image: '/images/video.mp4' },
     { id: 31, category: 'Ritocchi d\'Interni', title: 'Precisione e Dettaglio', image: '/images/work-video.mp4' },
-    { id: 32, category: 'Ritocchi d\'Interni', title: 'Rifiniture in Movimento', image: '/images/vid1.mp4' }
+    { id: 32, category: 'Ritocchi d\'Interni', title: 'Rifiniture in Movimento', image: '/images/vid1.mp4' },
+    { id: 33, category: 'Ritocchi d\'Interni', title: 'Maestria Artigianale', image: '/images/vid2.mp4' }
 ];
 
 const categories = ['Tutti', 'Residenziale', 'Commerciale', 'Ritocchi d\'Interni'];

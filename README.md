@@ -21,6 +21,12 @@ Il progetto è una Single Page Application (SPA) costruita con:
 - `Contact.jsx`: Form di contatto e informazioni geografiche (Atelier, Email, Telefono).
 - `Footer.jsx`: Piè di pagina con link legali e navigazione.
 
+## Modifiche Recenti (v0.0.9)
+
+- **Nuovo Video Portfolio**:
+  - Aggiunto un nuovo video artigianale (`vid2.mp4`) nella categoria *Ritocchi d'Interni*.
+  - Il portfolio conta ora un totale di **33 progetti d'eccellenza** tra foto e video.
+
 ## Modifiche Recenti (v0.0.8)
 
 - **Video Support nel Portfolio**:
